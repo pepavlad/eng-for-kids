@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="hamburger-menu">
+                <a class="menu-btn">
+                    <span class="btn"></span>
+                </a>
+            </div>
+            <div class="switch-toggle">
+                <div class="wrap">
+                    <input type="checkbox" id="on" checked >
+                    <label for="on">
+                       <span class="handler"><span class="handler-inner"></span></span>
+                       <span class="train-title">train</span>
+                       <span class="play-title">play</span>
+                       <span class="bg-on"></span>
+                    </label>
+                 </div>
+            </div>
+            <div class="menu">
+                <nav id="hide-menu" class="nav-train">
+                    <ul>
+                        <li><a href="Home" class="link active-link">Home</a></li>
+                        <li><a href="ActionA" class="link">Action (set A)</a></li>
+                        <li><a href="ActionB" class="link">Action (set B)</a></li>
+                        <li><a href="ActionC" class="link">Action (set C)</a></li>
+                        <li><a href="Adjective" class="link">Adjective</a></li>
+                        <li><a href="AnimalA" class="link">Animal (set A)</a></li>
+                        <li><a href="AnimalB" class="link">Animal (set B)</a></li>
+                        <li><a href="Clothes" class="link">Clothes</a></li>
+                        <li><a href="Emotions" class="link">Emotions</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="cards active-cards" id="Home">
+            <div class="cards-item front">
+                <img src="img/dive.jpg" alt="action">
+                <span>Action (set A)</span>
+            </div>
+            <div class="cards-item">
+                <img src="img/swim.jpg" alt="action">
+                <span>Action (set B)</span>
+            </div>
+            <div class="cards-item">
+                <img src="img/cry.jpg" alt="action">
+                <span>Action (set C)</span>
+            </div>
+            <div class="cards-item">
+                <img src="img/big.jpg" alt="adjective">
+                <span>Adjective</span>
+            </div>
+            <div class="cards-item">
+                <img src="img/bird.jpg" alt="animal">
+                <span>Animal (set A)</span>
+            </div>
+            <div class="cards-item">
+                <img src="img/cat.jpg" alt="animal">
+                <span>Animal (set B)</span>
+            </div>
+            <div class="cards-item">
+                <img src="img/dress.jpg" alt="clothes">
+                <span>Clothes</span>
+            </div>
+            <div class="cards-item">
+                <img src="img/smile.jpg" alt="emotions">
+                <span>Emotions</span>
+            </div>
+        </div>
+        <div class="cards" id="ActionA">
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/cry.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>cry</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/cry.jpg);">
+                    <div class="bottom-line">плакать</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/dance.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>dance</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/dance.jpg);">
+                    <div class="bottom-line">танцевать</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/dive.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>dive</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/dive.jpg);">
+                    <div class="bottom-line">нырять</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/draw.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>draw</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/draw.jpg);">
+                    <div class="bottom-line">рисовать</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/fish.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>fish</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/fish.jpg);">
+                    <div class="bottom-line">ловить рыбу</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/fly.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>fly</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/fly.jpg);">
+                    <div class="bottom-line">летать</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/hug.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>hug</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/hug.jpg);">
+                    <div class="bottom-line">обнимать</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/jump.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>jump</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/jump.jpg);">
+                    <div class="bottom-line">прыгать</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards" id="ActionB">
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/open.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>open</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/open.jpg);">
+                    <div class="bottom-line">открыть</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/play.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>play</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/play.jpg);">
+                    <div class="bottom-line">играть</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/point.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>point</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/point.jpg);">
+                    <div class="bottom-line">указывать</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/ride.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>ride</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/ride.jpg);">
+                    <div class="bottom-line">ездить</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/run.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>run</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/run.jpg);">
+                    <div class="bottom-line">бегать</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/sing.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>sing</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/sing.jpg);">
+                    <div class="bottom-line">петь</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/skip.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>skip</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/skip.jpg);">
+                    <div class="bottom-line">пропускать, прыгать</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/swim.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>swim</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/swim.jpg);">
+                    <div class="bottom-line">плавать</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards" id="ActionС">
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/argue.06b9a73a.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>argue</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/argue.06b9a73a.jpg);">
+                    <div class="bottom-line">спорить</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/build.0ddc52ca.jpg)">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>build</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/build.0ddc52ca.jpg);">
+                    <div class="bottom-line">строить</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/carry.4e29617e.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>carry</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/carry.4e29617e.jpg);">
+                    <div class="bottom-line">нести</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/catch.02ee0391.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>catch</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/catch.02ee0391.jpg);">
+                    <div class="bottom-line">ловить</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/drive.7756db52.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>drive</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/drive.7756db52.jpg);">
+                    <div class="bottom-line">водить машину</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/drop.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>drop</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/drop.jpg);">
+                    <div class="bottom-line">падать</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/pull.958b53a6.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>pull</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/pull.958b53a6.jpg);">
+                    <div class="bottom-line">тянуть</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/push.f5183491.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>push</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/push.f5183491.jpg);">
+                    <div class="bottom-line">толкать</div>
+                </div>
+            </div>
+        </div>
+        <div class="cards" id="Adjective">
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/big.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>big</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/big.jpg);">
+                    <div class="bottom-line">большой</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/small.a9f7a59d.jpg)">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>small</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/small.a9f7a59d.jpg);">
+                    <div class="bottom-line">маленький</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/fast.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>fast</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/fast.jpg);">
+                    <div class="bottom-line">быстрый</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/slow.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>slow</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/slow.jpg);">
+                    <div class="bottom-line">медленный</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/friendly.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>friendly</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/friendly.jpg);">
+                    <div class="bottom-line">дружелюбный</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/unfriendly.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>unfriendly</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/unfriendly.jpg);">
+                    <div class="bottom-line">недружелюбный</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/young.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>young</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/young.jpg);">
+                    <div class="bottom-line">молодой</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/old.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>old</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/old.jpg);">
+                    <div class="bottom-line">старый</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards" id="AnimalA">
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/cat.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>cat</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/cat.jpg);">
+                    <div class="bottom-line">кот</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/chick.jpg)">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>chick</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/chick.jpg);">
+                    <div class="bottom-line">цыпленок</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/chicken.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>chicken</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/chicken.jpg);">
+                    <div class="bottom-line">курица</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/dog.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>dog</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/dog.jpg);">
+                    <div class="bottom-line">собака</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/horse.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>horse</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/horse.jpg);">
+                    <div class="bottom-line">лошадь</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/pig.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>pig</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/pig.jpg);">
+                    <div class="bottom-line">свинья</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/rabbit.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>rabbit</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/rabbit.jpg);">
+                    <div class="bottom-line">кролик</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/sheep.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>sheep</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/sheep.jpg);">
+                    <div class="bottom-line">овца</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards" id="AnimalB">
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/bird.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>bird</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/bird.jpg);">
+                    <div class="bottom-line">птица</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/fish1.jpg)">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>fish</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/fish1.jpg);">
+                    <div class="bottom-line">рыба</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/frog.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>frog</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/frog.jpg);">
+                    <div class="bottom-line">лягушка</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/giraffe.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>giraffe</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/giraffe.jpg);">
+                    <div class="bottom-line">жираф</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/lion.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>lion</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/lion.jpg);">
+                    <div class="bottom-line">лев</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/mouse.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>mouse</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/mouse.jpg);">
+                    <div class="bottom-line">мышь</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/turtle.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>turtle</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/turtle.jpg);">
+                    <div class="bottom-line">черепаха</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/dolphin.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>dolphin</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/dolphin.jpg);">
+                    <div class="bottom-line">дельфин</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards" id="Clothes">
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/skirt.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>skirt</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/skirt.jpg);">
+                    <div class="bottom-line">юбка</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/pants.jpg)">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>pants</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/pants.jpg);">
+                    <div class="bottom-line">штаны</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/blouse.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>blouse</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/blouse.jpg);">
+                    <div class="bottom-line">блузка</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/dress.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>dress</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/dress.jpg);">
+                    <div class="bottom-line">платье</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/boot.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>boots</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/boot.jpg);">
+                    <div class="bottom-line">ботинки</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/shirt.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>shirt</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/shirt.jpg);">
+                    <div class="bottom-line">рубашка</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/coat.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>coat</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/coat.jpg);">
+                    <div class="bottom-line">пальто</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/shoe.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>shoe</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/shoe.jpg);">
+                    <div class="bottom-line">туфли</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards" id="Emotions">
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/sad.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>sad</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/sad.jpg);">
+                    <div class="bottom-line">грустный</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/angry.jpg)">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>angry</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/angry.jpg);">
+                    <div class="bottom-line">сердитый</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/happy.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>happy</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/happy.jpg);">
+                    <div class="bottom-line">счастливый</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/tired.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>tired</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/tired.jpg);">
+                    <div class="bottom-line">уставший</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/surprised.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>surprised</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/surprised.jpg);">
+                    <div class="bottom-line">удивлённый</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/scared.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>scared</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/scared.jpg);">
+                    <div class="bottom-line">напуганный</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/smile.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>smile</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/smile.jpg);">
+                    <div class="bottom-line">улыбка</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cards-item-section" style="background-image: url(img/laugh.jpg);">
+                    <div class="front">
+                        <div class="bottom-line">
+                            <span>laugh</span>  
+                        </div>
+                        <div class="rotate"></div>
+                    </div>
+                </div>
+                <div class="back" style="background-image: url(img/laugh.jpg);">
+                    <div class="bottom-line">смех</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
