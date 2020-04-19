@@ -44,40 +44,41 @@
     </header>
     <main>
         <div class="cards active-cards" id="Home">
-            <div class="cards-item front">
+            <div class="cards-item" data="ActionA">
                 <img src="img/dive.jpg" alt="action">
                 <span>Action (set A)</span>
             </div>
-            <div class="cards-item">
+            <div class="cards-item" data="ActionB">
                 <img src="img/swim.jpg" alt="action">
                 <span>Action (set B)</span>
             </div>
-            <div class="cards-item">
+            <div class="cards-item" data="ActionC">
                 <img src="img/cry.jpg" alt="action">
                 <span>Action (set C)</span>
             </div>
-            <div class="cards-item">
+            <div class="cards-item" data="Adjective">
                 <img src="img/big.jpg" alt="adjective">
                 <span>Adjective</span>
             </div>
-            <div class="cards-item">
+            <div class="cards-item" data="AnimalA">
                 <img src="img/bird.jpg" alt="animal">
                 <span>Animal (set A)</span>
             </div>
-            <div class="cards-item">
+            <div class="cards-item" data="AnimalB">
                 <img src="img/cat.jpg" alt="animal">
                 <span>Animal (set B)</span>
             </div>
-            <div class="cards-item">
+            <div class="cards-item" data="Clothes">
                 <img src="img/dress.jpg" alt="clothes">
                 <span>Clothes</span>
             </div>
-            <div class="cards-item">
+            <div class="cards-item" data="Emotions">
                 <img src="img/smile.jpg" alt="emotions">
                 <span>Emotions</span>
             </div>
         </div>
-        <div class="cards" id="ActionA">
+        <div class="cards cards-section" id="ActionA">
+            <div class="stars active-stars"></div>
             <div class="card">
                 <div class="cards-item-section" style="background-image: url(img/cry.jpg);">
                     <div class="front">
@@ -182,9 +183,14 @@
                     <div class="bottom-line">прыгать</div>
                 </div>
             </div>
+            <div class="button active-button">
+                <span>Start game</span>
+                <div class="repeat"></div>
+            </div>
         </div>
 
-        <div class="cards" id="ActionB">
+        <div class="cards cards-section" id="ActionB">
+            <div class="stars"></div>
             <div class="card">
                 <div class="cards-item-section" style="background-image: url(img/open.jpg);">
                     <div class="front">
@@ -289,9 +295,14 @@
                     <div class="bottom-line">плавать</div>
                 </div>
             </div>
+            <div class="button">
+                <span>Start game</span>
+                <div class="repeat"></div>
+            </div>
         </div>
 
-        <div class="cards" id="ActionС">
+        <div class="cards cards-section" id="ActionC">
+            <div class="stars"></div>
             <div class="card">
                 <div class="cards-item-section" style="background-image: url(img/argue.06b9a73a.jpg);">
                     <div class="front">
@@ -396,8 +407,14 @@
                     <div class="bottom-line">толкать</div>
                 </div>
             </div>
+            <div class="button">
+                <span>Start game</span>
+                <div class="repeat"></div>
+            </div>
         </div>
-        <div class="cards" id="Adjective">
+
+        <div class="cards cards-section" id="Adjective">
+            <div class="stars"></div>
             <div class="card">
                 <div class="cards-item-section" style="background-image: url(img/big.jpg);">
                     <div class="front">
@@ -502,9 +519,14 @@
                     <div class="bottom-line">старый</div>
                 </div>
             </div>
+            <div class="button">
+                <span>Start game</span>
+                <div class="repeat"></div>
+            </div>
         </div>
 
-        <div class="cards" id="AnimalA">
+        <div class="cards cards-section" id="AnimalA">
+            <div class="stars"></div>
             <div class="card">
                 <div class="cards-item-section" style="background-image: url(img/cat.jpg);">
                     <div class="front">
@@ -609,9 +631,14 @@
                     <div class="bottom-line">овца</div>
                 </div>
             </div>
+            <div class="button">
+                <span>Start game</span>
+                <div class="repeat"></div>
+            </div>
         </div>
 
-        <div class="cards" id="AnimalB">
+        <div class="cards cards-section" id="AnimalB">
+            <div class="stars"></div>
             <div class="card">
                 <div class="cards-item-section" style="background-image: url(img/bird.jpg);">
                     <div class="front">
@@ -716,9 +743,14 @@
                     <div class="bottom-line">дельфин</div>
                 </div>
             </div>
+            <div class="button">
+                <span>Start game</span>
+                <div class="repeat"></div>
+            </div>
         </div>
 
-        <div class="cards" id="Clothes">
+        <div class="cards cards-section" id="Clothes">
+            <div class="stars"></div>
             <div class="card">
                 <div class="cards-item-section" style="background-image: url(img/skirt.jpg);">
                     <div class="front">
@@ -823,9 +855,14 @@
                     <div class="bottom-line">туфли</div>
                 </div>
             </div>
+            <div class="button">
+                <span>Start game</span>
+                <div class="repeat"></div>
+            </div>
         </div>
 
-        <div class="cards" id="Emotions">
+        <div class="cards cards-section" id="Emotions">
+            <div class="stars"></div>
             <div class="card">
                 <div class="cards-item-section" style="background-image: url(img/sad.jpg);">
                     <div class="front">
@@ -930,8 +967,12 @@
                     <div class="bottom-line">смех</div>
                 </div>
             </div>
-        </div>
+            <div class="button">
+                <span>Start game</span>
+                <div class="repeat"></div>
+            </div>
+        </div>   
     </main>
-    <script src="main.js"></script>
+    <script src="dist/bundle.js"></script>
 </body>
 </html>

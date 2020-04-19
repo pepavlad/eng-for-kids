@@ -1,0 +1,25 @@
+{
+  "name": "eng-for-kids",
+  "version": "1.0.0",
+  "description": "webpack project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepavlad/eng-for-kids.git"
+  },
+  "author": "Vladislav Pepelyaev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepavlad/eng-for-kids/issues"
+  },
+  "homepage": "https://github.com/pepavlad/eng-for-kids#readme",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
