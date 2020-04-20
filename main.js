@@ -1,4 +1,4 @@
-import {showSection, toggle} from './modules/functions';
+import {showSection, toggle, switchToggle} from './modules/functions';
 //menu
 document.querySelector('.menu-btn').addEventListener('click', () =>{
     toggle();
@@ -13,50 +13,8 @@ document.addEventListener('click', function(e) {
 });
 //switch-toggle
 let namesOfAudio = [];
-document.getElementById('on').addEventListener('click', (elem)=>{
-    if(document.getElementById('on').checked){
-        document.getElementById('hide-menu').classList.remove('nav-play');
-        document.getElementById('hide-menu').classList.add('nav-train');
-        document.querySelectorAll('.cards-item').forEach((e)=>{
-            e.classList.toggle('cards-item-play');
-        });
-        document.querySelectorAll('.cards-item-section').forEach((e)=>{
-            e.classList.toggle('cards-item-section-play');
-        });
-        document.querySelectorAll('.front').forEach((e)=>{
-            e.style.display = 'block';
-        });
-        if(document.querySelector('.active-cards').id !== 'Home'){
-            document.querySelector('.active-button').classList.add('button');
-            document.querySelector('.active-button').classList.remove('repeat-active');
-            document.querySelectorAll('.button span').forEach((e) =>{
-                e.style.display = 'flex';
-            });
-            document.querySelectorAll('.repeat').forEach((e) =>{
-                e.style.display = 'none';
-            });
-            document.querySelector('.active-button').style.display = 'none';
-        }
-        
-        namesOfAudio = [];
-    } else {
-        for(let name of document.querySelectorAll('.active-cards .card .cards-item-section .front .bottom-line span')){
-            namesOfAudio.push(name.innerHTML);
-        }
-        namesOfAudio = namesOfAudio.sort(() => Math.random() - 0.5);
-        document.getElementById('hide-menu').classList.remove('nav-train');
-        document.getElementById('hide-menu').classList.add('nav-play');
-        document.querySelectorAll('.front').forEach((e)=>{
-            e.style.display = 'none';
-        });
-        document.querySelectorAll('.cards-item').forEach((e)=>{
-            e.classList.toggle('cards-item-play');
-        });
-        document.querySelectorAll('.cards-item-section').forEach((e)=>{
-            e.classList.toggle('cards-item-section-play');
-        });
-        document.querySelector('.active-button').style.display = 'flex';
-    }
+document.getElementById('on').addEventListener('click', ()=>{
+    switchToggle(namesOfAudio);
 });
 //card flip
 let btns = document.querySelectorAll('.rotate');
@@ -75,7 +33,6 @@ for (let btn of btns) {
     });
   }
 let arrayOfBacks = document.querySelectorAll('.back');
-
 for (let div of arrayOfBacks) {
     div.addEventListener('mouseout', (e)=>{
         e.target.parentNode.firstElementChild.style.transform = 'rotateY(0deg)';
@@ -88,23 +45,61 @@ document.querySelectorAll('.cards').forEach((e) =>{
 });
 //audio
 let i = 0;
+let counter = 0;
 let arrayOfCards = document.querySelectorAll('.cards-item-section');
 for (let div of arrayOfCards) {
     div.addEventListener('click', (e)=>{
         if(!document.getElementById('on').checked){
                 if(document.querySelector('.active-button').classList.contains('repeat-active')){
-                        if(i === 7) i = 0;
-                        if(e.target.firstElementChild.firstElementChild.firstElementChild.innerHTML === namesOfAudio[i]){
+                            if(e.target.firstElementChild.firstElementChild.firstElementChild.innerHTML === namesOfAudio[i]){
                             let audioCorrect = new Audio(`audio/correct.mp3`);
                             audioCorrect.play();
-                            i++
-                            let audioElement = new Audio(`audio/${namesOfAudio[i]}.mp3`);
-                            setTimeout(function() {
-                                audioElement.play();
-                              }, 1000);
+                            i++;
+                            if(i < 8){
+                                let audioElement = new Audio(`audio/${namesOfAudio[i]}.mp3`);
+                                setTimeout(function() {
+                                    audioElement.play();
+                                }, 1000);
+                            }
+                            e.target.style.opacity = '0.6';
+                            e.target.style.pointerEvents = 'none';
+                            e.target.parentNode.parentNode.firstElementChild.innerHTML +='<img src="img/star-win.svg" class="star-play-win"></img>';
+                            if(i === 8){
+                                i = 0;
+                                e.target.parentNode.parentNode.firstElementChild.innerHTML = '';
+                                document.querySelector('.switch-toggle').style.display = 'none';
+                                document.getElementById('on').checked = true;
+                                e.target.parentNode.parentNode.style.display = 'none';
+                                if(counter === 0){
+                                    document.querySelector('.win').style.display = 'flex';
+                                    let audioWin = new Audio('audio/success.mp3');
+                                    audioWin.play();
+                                } else {
+                                    document.querySelector('.failure').style.display = 'flex';
+                                    document.querySelector('.failure span').innerHTML += `${counter} errors`; 
+                                    let audioLose = new Audio('audio/failure.mp3');
+                                    audioLose.play();
+                                }
+                                counter = 0;
+                                setTimeout(function() {
+                                    switchToggle(namesOfAudio);
+                                    e.target.parentNode.parentNode.style.display = 'flex';
+                                    document.querySelector('.switch-toggle').style.display = 'block';
+                                    e.target.parentNode.style.display = 'flex';
+                                    arrayOfCards.forEach((e)=>{
+                                        e.style.opacity = '1';
+                                        e.style.pointerEvents = 'all';
+                                    });
+                                    document.querySelector('.win').style.display = 'none';
+                                    document.querySelector('.failure').style.display = 'none';   
+                                }, 2500);
+                                
+                            }
                         } else {
                             let audioError = new Audio(`audio/error.mp3`);
                             audioError.play();
+                            counter++;
+                            e.target.parentNode.parentNode.firstElementChild.innerHTML +='<img src="img/star.svg" class="star-play"></img>'
                         }
                 }
         } else if(document.getElementById('on').checked) {
@@ -152,11 +147,7 @@ let links = document.querySelectorAll('.link');
 let cards = [].slice.call(document.querySelectorAll('.cards-item'));
 followLink(links, 'href');
 followLink(cards, 'data');
-
-
-
 //game
-
 for (let button of document.querySelectorAll('.cards-section')) {
     button.lastElementChild.addEventListener('click', (e) =>{
         if(document.querySelector('.active-cards').id !== 'Home'){
@@ -170,8 +161,6 @@ for (let button of document.querySelectorAll('.cards-section')) {
             });
             let audioElement = new Audio(`audio/${namesOfAudio[i]}.mp3`);
             audioElement.play();
-            console.log(document.querySelectorAll('.active-cards .card .cards-item-section .front .bottom-line span'));
-            console.log(namesOfAudio);
         }
     });
 }

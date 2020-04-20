@@ -126,7 +126,46 @@ function changeButtonClass(section){
   });
   document.getElementById(section).lastElementChild.classList.add('active-button');
 }
-
+export function switchToggle(namesOfAudio){
+  if(document.getElementById('on').checked){
+    document.getElementById('hide-menu').classList.remove('nav-play');
+    document.getElementById('hide-menu').classList.add('nav-train');
+    document.querySelectorAll('.cards-item').forEach((e)=>{
+        e.classList.toggle('cards-item-play');
+    });
+    document.querySelectorAll('.cards-item-section').forEach((e)=>{
+        e.classList.toggle('cards-item-section-play');
+    });
+    document.querySelectorAll('.front').forEach((e)=>{
+        e.style.display = 'block';
+    });
+    if(document.querySelector('.active-cards').id !== 'Home'){
+        document.querySelector('.active-button').classList.add('button');
+        document.querySelector('.active-button').classList.remove('repeat-active');
+        document.querySelectorAll('.button span').forEach((e) =>{
+            e.style.display = 'flex';
+        });
+        document.querySelectorAll('.repeat').forEach((e) =>{
+            e.style.display = 'none';
+        });
+        document.querySelector('.active-button').style.display = 'none';
+    }
+    namesOfAudio = [];
+} else {
+    document.getElementById('hide-menu').classList.remove('nav-train');
+    document.getElementById('hide-menu').classList.add('nav-play');
+    document.querySelectorAll('.front').forEach((e)=>{
+        e.style.display = 'none';
+    });
+    document.querySelectorAll('.cards-item').forEach((e)=>{
+        e.classList.toggle('cards-item-play');
+    });
+    document.querySelectorAll('.cards-item-section').forEach((e)=>{
+        e.classList.toggle('cards-item-section-play');
+    });
+    document.querySelector('.active-button').style.display = 'flex';
+}
+}
 export function toggle(){
   document.getElementById('hide-menu').classList.toggle('nav-modal-open');
   document.querySelector('.menu-btn').classList.toggle('menu-btn-active');
