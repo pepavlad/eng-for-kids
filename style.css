@@ -384,7 +384,8 @@ nav.nav-play{
 
 .stars{
   display: flex;
-  flex-direction: row-reverse;
+
+  justify-content: flex-end;
   position: absolute;
   top: 90px;
   overflow: hidden;

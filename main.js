@@ -82,6 +82,8 @@ for (let div of arrayOfCards) {
                                 }
                                 counter = 0;
                                 setTimeout(function() {
+                                    document.querySelector('.win').style.display = 'none';
+                                    document.querySelector('.failure').style.display = 'none';   
                                     switchToggle(namesOfAudio);
                                     e.target.parentNode.parentNode.style.display = 'flex';
                                     document.querySelector('.switch-toggle').style.display = 'block';
@@ -90,8 +92,6 @@ for (let div of arrayOfCards) {
                                         e.style.opacity = '1';
                                         e.style.pointerEvents = 'all';
                                     });
-                                    document.querySelector('.win').style.display = 'none';
-                                    document.querySelector('.failure').style.display = 'none';   
                                 }, 2500);
                                 
                             }
